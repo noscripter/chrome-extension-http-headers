@@ -11,7 +11,7 @@
 	],
 	"browser_action": {
 		"default_title": "__MSG_extension_default_title__",
-		"default_icon": "icon16.png",
+		"default_icon": "icon128.png",
 		"popup": "popup.html"
 	},
 	"icons": {

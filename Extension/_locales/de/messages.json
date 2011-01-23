@@ -27,6 +27,14 @@
 		"message": "http://www.google.de",
 		"description": ""
 	},
+	"name": {
+		"message": "Name",
+		"description": ""
+	},
+	"value": {
+		"message": "Wert",
+		"description": ""
+	},
 	"url_not_valid": {
 		"message": "Der URL ist nicht gültig und kann nicht geladen werden.",
 		"description": ""
