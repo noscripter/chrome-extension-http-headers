@@ -58,6 +58,8 @@
 			}
 
 			showError = function(type) {
+				document.getElementById('loading').style.display = 'none';
+				document.getElementById('loading').value = 0;
 				document.getElementById('result').style.display = 'none';
 				document.getElementById('result').innerText = '';
 				document.getElementById('error').innerText = chrome.i18n.getMessage(type);
@@ -71,14 +73,22 @@
 			}
 
 			getHeaders = function() {
+				document.getElementById('result').style.display = 'none';
+				document.getElementById('result').innerText = '';
+
 				var url = document.getElementById('url').value;
 
 				if (url != '') {
 					if (isValidUrl(url) == true) {
+						document.getElementById('loading').style.display = 'block';
 						var xhr = new XMLHttpRequest();
 						xhr.open('GET', url, true);
 						xhr.onreadystatechange = function() {
+							document.getElementById('loading').value = xhr.readyState;
 							if (xhr.readyState == 4) {
+								document.getElementById('loading').value = xhr.readyState;
+								document.getElementById('loading').style.display = 'none';
+								document.getElementById('loading').value = 0;
 								switch (xhr.status) {
 								case 0:
 									showError('domain_not_found');
@@ -130,6 +140,7 @@
 				<input type="submit" id="button_submit"/>
 			</p>
 		</form>
+		<progress id="loading" value="0" max="4"></progress>
 		<div id="result"></div>
 		<div id="error"></div>
 	</body>
