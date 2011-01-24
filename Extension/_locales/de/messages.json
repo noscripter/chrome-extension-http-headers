@@ -4,7 +4,7 @@
 		"description": "The name of the extension"
 	},
 	"extension_description": {
-		"message": "Diese Chrome Extension ermittelt Latitude und Longitude zu einer Adresse und zeigt diese auf einer Karte an.",
+		"message": "Diese Google Chrome Extension zeigt die HTTP Response Headers einer URL an.",
 		"description": "The description of the extension"
 	},
 	"extension_default_title": {
@@ -41,6 +41,10 @@
 	},
 	"network_error": {
 		"message": "Es war nicht möglich, die angeforderten Daten zu holen, da ein Netzwerkfehler vorliegt.",
+		"description": ""
+	},
+	"domain_not_found": {
+		"message": "Die angegebene Domain konnte nicht gefunden werden.",
 		"description": ""
 	}
 }
