@@ -4,7 +4,7 @@
 		"description": "The name of the extension"
 	},
 	"extension_description": {
-		"message": "This Chrome extension finds the latitude and longitude to a given address and shows the address on a map.",
+		"message": "Google Chrome extension that lets you quickly view HTTP Response Headers of a URL.",
 		"description": "The description of the extension"
 	},
 	"extension_default_title": {
@@ -41,6 +41,10 @@
 	},
 	"network_error": {
 		"message": "It's not possible to get the requested response headers because of a network error.",
+		"description": ""
+	},
+	"domain_not_found": {
+		"message": "It was not possible to not find the given domain.",
 		"description": ""
 	}
 }

@@ -79,21 +79,28 @@
 						xhr.open('GET', url, true);
 						xhr.onreadystatechange = function() {
 							if (xhr.readyState == 4) {
-								var headers = xhr.getAllResponseHeaders().split("\n");
-								if (headers.length > 0 && headers[0] != '') {
-									var headers_table = '<table><tr><th>'+chrome.i18n.getMessage('name')+'</th><th>'+chrome.i18n.getMessage('value')+'</th></tr>';
-									headers.forEach(function(line) {
-										if (line != '') {
-											header_name = line.substring(0, line.indexOf(': '));
-											header_value = line.substring(line.indexOf(': ')+2, line.length-1);
-											headers_table += '<tr><td nowrap="nowrap">' + header_name + '</td><td width="100%">' + header_value + '</td></tr>';
-										}
-									});
-									headers_table += '</table>';
-									document.getElementById('result').innerHTML = headers_table;
-									document.getElementById('result').style.display = 'block';
-								} else {
-									showError('network_error');
+								switch (xhr.status) {
+								case 0:
+									showError('domain_not_found');
+									break;
+								default:
+									var headers = xhr.getAllResponseHeaders().split("\n");
+									if (headers.length > 0 && headers[0] != '') {
+										var headers_table = '<table><tr><th>'+chrome.i18n.getMessage('name')+'</th><th>'+chrome.i18n.getMessage('value')+'</th></tr>';
+										headers.forEach(function(line) {
+											if (line != '') {
+												header_name = line.substring(0, line.indexOf(': '));
+												header_value = line.substring(line.indexOf(': ')+2, line.length-1);
+												headers_table += '<tr><td nowrap="nowrap">' + header_name + '</td><td width="100%">' + header_value + '</td></tr>';
+											}
+										});
+										headers_table += '</table>';
+										document.getElementById('result').innerHTML = headers_table;
+										document.getElementById('result').style.display = 'block';
+									} else {
+										showError('network_error');
+									}
+									break;
 								}
 							}
 						}
