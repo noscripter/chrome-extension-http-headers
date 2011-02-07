@@ -23,6 +23,10 @@
 		"message": "URL",
 		"description": ""
 	},
+	"http_request_status": {
+		"message": "HTTP request status",
+		"description": ""
+	},
 	"url_example": {
 		"message": "http://www.google.com",
 		"description": ""

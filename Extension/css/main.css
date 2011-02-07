@@ -21,12 +21,19 @@ table {
 	width: 100%;
 }
 
+caption {
+	text-align: right;
+	text-shadow: 1px 1px 1px #CCCCCC;
+	padding-bottom: 2px;
+}
+
 th {
 	background: #F9F9F9;
+	font-weight: bold;
 }
 
 td, th {
-	padding: 3px;
+	padding: 2px;
 	border: 1px solid #E7E7E7;
 	text-align: left;
 	vertical-align: top;

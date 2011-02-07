@@ -27,6 +27,10 @@
 		"message": "http://www.google.de",
 		"description": ""
 	},
+	"http_request_status": {
+		"message": "HTTP-Request-Status",
+		"description": ""
+	},
 	"name": {
 		"message": "Name",
 		"description": ""
