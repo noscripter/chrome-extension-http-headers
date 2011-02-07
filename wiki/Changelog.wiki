@@ -5,6 +5,10 @@ If you have a feature request or found a bug, please [http://code.google.com/p/c
 
 = Versions =
 
+== Version 1.0.0.1 (2011-02-07) ==
+
+  * New: Now you can find at the top of the table with the HTTP response headers the HTTP response status (code and text) (Issue 3)
+
 == Version 1.0.0.0 (2011-01-24) ==
 
   * Initial version.
