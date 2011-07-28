@@ -98,12 +98,12 @@
 									default:
 										var headers = xhr.getAllResponseHeaders().split("\n");
 										if (headers.length > 0 && headers[0] != '') {
-											var headers_table = '<table><caption>'+chrome.i18n.getMessage('http_request_status')+': '+String(xhr.status)+' ('+xhr.statusText+')</caption><thead><tr><th>'+chrome.i18n.getMessage('name')+'</th><th>'+chrome.i18n.getMessage('value')+'</th></tr></thead>';
+											var headers_table = '<table><caption>'+chrome.i18n.getMessage('http_request_status')+': '+String(xhr.status.replace(/(<([^>]+)>)/ig,''))+' ('+xhr.statusText..replace(/(<([^>]+)>)/ig,'')+')</caption><thead><tr><th>'+chrome.i18n.getMessage('name')+'</th><th>'+chrome.i18n.getMessage('value')+'</th></tr></thead>';
 											headers.forEach(function(line) {
 												if (line != '') {
 													header_name = line.substring(0, line.indexOf(': '));
 													header_value = line.substring(line.indexOf(': ')+2, line.length-1);
-													headers_table += '<tr><td nowrap="nowrap">' + header_name + '</td><td width="100%">' + header_value + '</td></tr>';
+													headers_table += '<tr><td nowrap="nowrap">' + header_name.replace(/(<([^>]+)>)/ig,'') + '</td><td width="100%">' + header_value.replace(/(<([^>]+)>)/ig,'') + '</td></tr>';
 												}
 											});
 											headers_table += '</table>';
