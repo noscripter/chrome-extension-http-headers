@@ -1,0 +1,24 @@
+{
+  "name": "__MSG_extension_name__",
+  "default_locale": "en",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "__MSG_extension_description__",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "action": {
+    "default_title": "__MSG_extension_default_title__",
+    "default_icon": "icon128.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

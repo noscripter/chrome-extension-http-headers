@@ -1,0 +1,54 @@
+{
+  "extension_name": {
+    "message": "HTTP Headers",
+    "description": "The name of the extension"
+  },
+  "extension_description": {
+    "message": "Diese Google Chrome Extension zeigt die HTTP Response Headers einer URL an.",
+    "description": "The description of the extension"
+  },
+  "extension_default_title": {
+    "message": "HTTP Headers",
+    "description": "The default title of the extension"
+  },
+  "headline": {
+    "message": "HTTP Headers",
+    "description": "The first headline of the extension"
+  },
+  "tabs": {
+    "message": "Tabs",
+    "description": ""
+  },
+  "url": {
+    "message": "URL",
+    "description": ""
+  },
+  "url_example": {
+    "message": "http://www.google.de",
+    "description": ""
+  },
+  "http_request_status": {
+    "message": "HTTP-Request-Status",
+    "description": ""
+  },
+  "name": {
+    "message": "Name",
+    "description": ""
+  },
+  "value": {
+    "message": "Wert",
+    "description": ""
+  },
+  "url_not_valid": {
+    "message": "Der URL ist nicht gültig und kann nicht geladen werden.",
+    "description": ""
+  },
+  "network_error": {
+    "message": "Es war nicht möglich, die angeforderten Daten zu holen, da ein Netzwerkfehler vorliegt.",
+    "description": ""
+  },
+  "domain_not_found": {
+    "message": "Die angegebene Domain konnte nicht gefunden werden.",
+    "description": ""
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1 id="headline"></h1>
+    <form id="form_url" onsubmit="getHeaders(); return false;">
+      <p>
+        <label for="urls" id="label_urls"></label>
+        <select id="urls"/>
+          <option></option>
+        </select>
+      </p>
+      <p>
+        <label for="url" id="label_url"></label>
+        <input type="text" id="url"/>
+      </p>
+      <p>
+        <label>&nbsp;</label>
+        <input type="submit" id="button_submit"/>
+      </p>
+    </form>
+    <progress id="loading" value="0" max="4"></progress>
+    <div id="result"></div>
+    <div id="error"></div>
+  </body>
+</html>
